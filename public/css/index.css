@@ -1,0 +1,87 @@
+#app-layout>.navbar{
+	background-color: #3B5998;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: white;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	color: white;
+	background-color: #355089;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	color: white;
+	background-color: #355089;
+}
+.dropdown-menu>li>a{
+	color: white;
+	background-color: #3B5998;
+}
+.dropdown-menu>li>a:hover{
+	color: white;
+	background-color: #355089;
+}	
+
+
+
+.create-table-form tr>td:first-child{
+	font-weight: bold;
+}
+.user-text{
+	font-size: 1.1em;
+	font-weight: bold;
+}
+#hidden{
+	display: none;
+}
+.save{
+	display: none;
+}
+.cancel{
+	display: none;
+}
+hr{
+	border-color: black;
+}
+.pagination > .active > span{
+	color: black;
+	background-color: #cccccc;
+	border: 1px solid grey; 
+}
+.pagination > .active > span:hover{
+	color: black;
+	background-color: #cccccc;
+	border: 1px solid grey; 
+}
+.pagination > li > a{
+	color: #595959;
+}
+.pagination > li > a:hover{
+	color: black;
+}
+.row{
+	margin-top: 5px;
+}
+.invisible-link{
+	color: #777777;
+	text-decoration: underline;
+	
+}
+.invisible-link:hover{
+	color: black;
+}
+.request_target:hover{
+	cursor: pointer;
+}
+@media only screen and (max-width: 990px) {
+    #special_hr {
+        display: none;
+    }
+}
+.input-target > input.form-control,.input-target > select.form-control{
+	min-width: 120px;	
+}
+input.form-control:hover,select.form-control:hover {
+	cursor: pointer;
+}
