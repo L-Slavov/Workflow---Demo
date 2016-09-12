@@ -79,12 +79,12 @@ class AuthController extends Controller
   
 
 
-        if ($data['role'] == 'User' && $data['partner'] == 'beOnline') {
+        if ($data['role'] == 'User' && $data['partner'] == 'LyuboINC') {
             $permissions = Role::where("name","SuperUser")->first();
             $data['role'] = "SuperUser";
         }else if($data['role'] == 'Manager'){
             $permissions = Role::where("name","Manager")->first();
-        }else if($data['role'] == 'Admin' && $data['partner'] == 'beOnline'){
+        }else if($data['role'] == 'Admin' && $data['partner'] == 'LyuboINC'){
             $permissions = Role::where("name","SuperAdmin")->first();
             $data['role'] = "SuperAdmin";
         }else if($data['role'] == 'User'){
@@ -95,11 +95,11 @@ class AuthController extends Controller
 
         Permissions:: create([
             "username" => $data['username'],
-            'create_user_beonline'=>$permissions["create_user_beonline"],
+            'create_user_LyuboINC'=>$permissions["create_user_LyuboINC"],
             'create_user_partner'=>$permissions["create_user_partner"],
-            'edit_user_beonline'=>$permissions["edit_user_beonline"],
+            'edit_user_LyuboINC'=>$permissions["edit_user_LyuboINC"],
             'edit_user_partner'=>$permissions["edit_user_partner"],
-            'view_tasks_beonline'=>$permissions["view_tasks_beonline"],
+            'view_tasks_LyuboINC'=>$permissions["view_tasks_LyuboINC"],
             'view_tasks_partner'=>$permissions["view_tasks_partner"],
             'view_tasks_self'=>$permissions["view_tasks_self"],
             'edit_tasks_status'=>$permissions["edit_tasks_status"],
