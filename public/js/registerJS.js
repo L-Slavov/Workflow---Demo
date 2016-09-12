@@ -17,7 +17,7 @@ $(document).ready(function() {
 	
 	$('.radio input').change(function(){
 		if($('input[value = "Manager"]').is(':checked')){
-			$('select option[value = "beOnline"]').prop("selected",true);
+			$('select option[value = "LyuboINC"]').prop("selected",true);
 			$('select').closest(".form-group").hide();
 		}else{
 			$('select').closest(".form-group").show();
@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 
 	$("select").change(function(){
-		 if($('select option[value != "beOnline"]').is(":checked")){
+		 if($('select option[value != "LyuboINC"]').is(":checked")){
 		 	$('input[value = "Manager"]').closest('.radio').hide();
 		 }else{
 		 	$('input[value = "Manager"]').closest('.radio').show();

@@ -14,7 +14,7 @@
 	<form method="post"  action="{{ url('/createpartner') }}" >
  	{{ csrf_field() }}
 	<label>Партьор:</label>
-	<input type="text" name="partner" class="form-control"></input>
+	<input type="text" name="name" class="form-control"></input>
 	<button type="submit">Запази</button>
  	</form>
 

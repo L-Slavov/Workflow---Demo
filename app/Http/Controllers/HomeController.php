@@ -121,6 +121,8 @@ class HomeController extends Controller
         $task->save();
         }
 
+        // Disabled Mailing system
+        /*
         $mailReceiver = User::where("username",$task->requested_by)->first();
         // sending mail to user and support that we have started working on the task.
         // emails.taskStart is a php blade in views/emails
@@ -129,6 +131,7 @@ class HomeController extends Controller
             $m->to($user->email, $task->requested_by)->subject('Заявка '.$task->task_summary);
             $m->cc("lubomiri@abv.bg");
         });
+        */
     
         return redirect('/')->with('status', 'Работа по заявка '.$task->task_summary.' е започната!');
     }
@@ -150,12 +153,15 @@ class HomeController extends Controller
         }
         // sending mail to user and support that we have finished working on the task.
         // emails.taskComplete is a php blade in views/emails
+
+        // Disabled mailing system
+        /*
         Mail::send('emails.taskComplete', ['user'=>$user,'task' => $task], function ($m) use ($user,$task) {
             $m->from('support@LyuboINC.bg', 'LyuboINC Ticket system');
             $m->to($user->email, $user->name)->subject('Заявка '.$task->task_summary);
             $m->cc("lubomiri@abv.bg");
         });
-        
+        */
         return redirect('/')->with('status', 'Работата по заявка '.$task->task_summary.' е завършена!');
     }
 

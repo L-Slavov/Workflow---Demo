@@ -29,13 +29,13 @@ class PartnerController extends Controller
     		return view('errors.403');
     	}
     	$validator = Validator::make($request->all(), [
-            'partner' => 'required|unique:partner_taskid',
+            'name' => 'required|unique:partners',
         ]);
         if ($validator->fails()) {
             return redirect('/createpartner')->withErrors($validator);
         }
-    	Partner::create(['name'=>$request->partner_name]);
-    	TaskID::create(['partner'=>$request->partner_name,'task_number'=>0]);
+    	Partner::create(['name'=>$request->name]);
+    	TaskID::create(['partner'=>$request->name,'task_number'=>0]);
     	return redirect('/')->with('status', 'Партьорът беше успешно добавен!');
     }
 }
