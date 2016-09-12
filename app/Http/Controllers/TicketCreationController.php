@@ -103,12 +103,13 @@ class TicketCreationController extends Controller
     }
 
         //sending mail to support about the new ticket
+       /*
         Mail::send('emails.taskCreation', ['user'=>$user,'task' => $task], function ($m) use ($user,$task) {
             $m->from('support@LyuboINC.bg', 'LyuboINC Ticket system');
             $m->to("lubomiri@abv.bg")->subject('Заявка '.$task->task_summary);
             
         });
-        
+        */
         return redirect('/');
     }
 }
