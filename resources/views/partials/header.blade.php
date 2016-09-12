@@ -12,8 +12,8 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                   SpeedFlow
-                   <!--<img src="{{ URL::to('/') }}/images/logo.png" alt="beOnline-logo" width="120px" height="auto"/>-->
+                  
+                   <img src="{{ URL::to('/') }}/images/logo.png" alt="beOnline-logo" style="margin-top: -7px" />
                 </a>
             </div>
 
